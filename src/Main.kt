@@ -90,10 +90,10 @@ fun main(){
         if(answer == "test") {
             val tests = arrayOf("+ - 13 4 55", "+  2 *  2 - 2 1", "+     + 10 20   30",
                     "/ + 3 10 * + 2 3 - 3 5", "+ - + 1 2 9 8", "/ 9 - 7 4",
-                    "* + 8 6 - + 1 2 3", "- * / 15 - 7 + 1 1 3 + 2 + 1 1", "- * / 15 - 7 2 3 + 2 + 1 1", "- 2 3 + 4")
+                    "* + 8 6 - + 1 2 3", "- * / 15 - 7 + 1 1 3 + 2 + 1 1", "- * / 15 - 7 2 3 + 2 + 1 1", "- 2 3 + 4", "- - 1 2", "- - 1a 2")
             for(test in tests) {
                 println("\nИсходное префиксное выражение: $test")
-                println("Результат: ${transformExpression(test)}")
+                if(checkAnswer(test)) println("Результат: ${transformExpression(test)}")
             }
             break
         }
